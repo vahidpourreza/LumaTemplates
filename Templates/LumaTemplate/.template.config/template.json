@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Luma",
+    "classifications": [ "Luma", "DDD", "Web API", "API" , "Solution" ],
+    "identity": "Luma.Default.SolutionTemplate.CSharp",
+    "name": "Luma Blank Solution",
+    "shortName": "Lumasln",
+    "sourceName": "LumaTemplate",
+    "preferNameDirectory": true,
+    "tags": {
+        "language": "C#",
+        "type": "solution"
+    },
+    "symbols": {
+        "namespace": {
+            "type": "parameter",
+            "replaces": "LumaTemplate",
+            "FileRename": "LumaTemplate",
+            "defaultValue": "LumaTemplate"
+        },
+        "dbContextName": {
+            "type": "parameter",
+            "replaces": "DbContextName",
+            "FileRename": "DbContextName",
+            "defaultValue": "DbContextName"
+        }
+    }
+}
+
+
+
+
+

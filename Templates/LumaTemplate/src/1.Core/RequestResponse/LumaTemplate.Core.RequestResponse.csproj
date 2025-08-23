@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="Luma.Extensions.Translations.Abstractions" Version="9.0.0" />
+		<PackageReference Include="Luma.Core.RequestResponse" Version="9.0.0" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Resources\LumaTemplate.Core.Resources.csproj" />
+	</ItemGroup>
+
+
+</Project>
+
