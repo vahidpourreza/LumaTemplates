@@ -26,13 +26,13 @@
         },
         "httpPort": {
             "type": "parameter",
-            "replaces": "5198",
+            "replaces": "httpPort",
             "defaultValue": "5198",
             "description": "HTTP port number"
         },
         "httpsPort": {
             "type": "parameter",
-            "replaces": "7202",
+            "replaces": "httpsPort",
             "defaultValue": "7202",
             "description": "HTTPS port number"
         },
