@@ -1,3 +1,5 @@
+using Luma.EndPoints.Web.Extensions.DependencyInjection;
+using Luma.EndPoints.Web.Extensions.ModelBinding;
 using Luma.Infra.Data.Sql.Commands.Interceptors;
 using Luma.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Cors.Infrastructure;
@@ -7,10 +9,6 @@ using Steeltoe.Discovery.Client;
 using LumaTemplate.Endpoints.API.Extensions.HealthCheck;
 using LumaTemplate.Infra.Data.Sql.Commands.Common;
 using LumaTemplate.Infra.Data.Sql.Queries.Common;
-using LumaTemplate.Core.Contracts.Common;
-using Luma.EndPoints.Web.Extensions.DependencyInjection;
-using Luma.EndPoints.Web.Extensions.ModelBinding;
-
 
 namespace LumaTemplate.Endpoints.API.Extensions;
 public static class HostingExtensions
@@ -19,11 +17,14 @@ public static class HostingExtensions
     {
         IConfiguration configuration = builder.Configuration;
 
-        builder.Services.AddLumaObservabilitySupport(configuration, "OpenTeletmetry");
+        builder.Services.AddLumaObservabilitySupport(configuration, "OpenTelemetry");
         builder.Services.AddLumaApiCore("Luma", "LumaTemplate");
         builder.Services.AddLumaDefaultApiVersioning();
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddLumaInMemoryCaching();
+
+        //builder.Services.AddLumaInMemoryCaching();
+        builder.Services.AddLumaSqlDistributedCache(configuration, "Cache");
+
         builder.Services.AddNonValidatingValidator();
         builder.Services.AddLumaNewtonSoftSerializer();
         builder.Services.AddHttpContextAccessor();
@@ -65,7 +66,6 @@ public static class HostingExtensions
 
         builder.Services.AddDbContext<DbContextNameQueryDbContext>(c => c.UseSqlServer(configuration.GetConnectionString("QueryDb_ConnectionString")));
 
-        builder.Services.AddScoped<ILumaTemplateUnitOfWork, LumaTemplateUnitOfWork>(); // This is for UOW, in the next version it not needed to be here.
 
         #endregion
 
