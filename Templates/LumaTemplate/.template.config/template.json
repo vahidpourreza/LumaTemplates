@@ -36,12 +36,6 @@
             "defaultValue": "7202",
             "description": "HTTPS port number"
         },
-        "launchBrowser": {
-            "type": "parameter",
-            "replaces": "LaunchBrowserValue",
-            "defaultValue": "false",
-            "description": "Whether to launch browser on startup"
-        },
         "environment": {
             "type": "parameter",
             "replaces": "EnvironmentValue",

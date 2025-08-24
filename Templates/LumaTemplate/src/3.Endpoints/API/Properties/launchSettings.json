@@ -4,7 +4,7 @@
     "HttpProfileName": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": "LaunchBrowserValue",
+      "launchBrowser": false,
       "applicationUrl": "http://localhost:httpPort",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "EnvironmentValue"
@@ -13,7 +13,7 @@
     "HttpsProfileName": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": "LaunchBrowserValue",
+      "launchBrowser": false,
       "applicationUrl": "https://localhost:httpsPort;http://localhost:httpPort",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "EnvironmentValue"
