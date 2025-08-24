@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net9.0</TargetFramework>
@@ -6,14 +6,13 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
-	
-	<ItemGroup>
-		
-		<PackageReference Include="Steeltoe.Discovery.Eureka" Version="3.2.8" />
-		
-		<PackageReference Include="Luma.EndPoints.Web" Version="9.0.0" />
 
+
+
+
+	<ItemGroup>
 		<PackageReference Include="Luma.Extensions.Caching.InMemory" Version="9.0.0" />
+		<PackageReference Include="Luma.Extensions.Caching.Distributed.Sql" Version="9.0.0" />
 		<PackageReference Include="Luma.Extensions.ChangeDataLog.Hamster" Version="9.0.0" />
 		<PackageReference Include="Luma.Extensions.ChangeDataLog.Sql" Version="9.0.0" />
 		<PackageReference Include="Luma.Extensions.Events.PollingPublisher" Version="9.0.0" />
@@ -26,32 +25,51 @@
 		<PackageReference Include="Luma.Extensions.Translations.Parrot" Version="9.0.0" />
 		<PackageReference Include="Luma.Extensions.UsersManagement" Version="9.0.0" />
 		<PackageReference Include="Luma.Extensions.DependencyInjection" Version="9.0.0" />
-		
+
 		<PackageReference Include="Luma.Utilities.Auth.ApiAuthentication" Version="9.0.0" />
 		<PackageReference Include="Luma.Utilities.OpenTelemetryRegistration" Version="9.0.0" />
 		<PackageReference Include="Luma.Utilities.ScalarRegistration" Version="9.0.0" />
 		<PackageReference Include="Luma.Utilities.SerilogRegistration" Version="9.0.0" />
 		<PackageReference Include="Luma.Utilities.SoftwarePartDetector" Version="9.0.0" />
-	</ItemGroup>
-	
-	<ItemGroup>
+
+		<PackageReference Include="Luma.EndPoints.Web" Version="9.0.0" />
+		<PackageReference Include="Luma.Core.Domain.Toolkits" Version="9.0.0" />
+
+		<PackageReference Include="Steeltoe.Discovery.Eureka" Version="3.2.8" />
+
+
+
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.1">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
-
 	</ItemGroup>
 
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\1.Core\ApplicationService\LumaTemplate.Core.ApplicationService.csproj" />
+		<ProjectReference Include="..\..\1.Core\Contracts\LumaTemplate.Core.Contracts.csproj" />
+		<ProjectReference Include="..\..\1.Core\DomainService\LumaTemplate.Core.DomainService.csproj" />
+		<ProjectReference Include="..\..\1.Core\Domain\LumaTemplate.Core.Domain.csproj" />
+		<ProjectReference Include="..\..\1.Core\RequestResponse\LumaTemplate.Core.RequestResponse.csproj" />
+		<ProjectReference Include="..\..\1.Core\Resources\LumaTemplate.Core.Resources.csproj" />
+		<ProjectReference Include="..\..\2.Infra\Data\Sql.Commands\LumaTemplate.Infra.Data.Sql.Commands.csproj" />
+		<ProjectReference Include="..\..\2.Infra\Data\Sql.Queries\LumaTemplate.Infra.Data.Sql.Queries.csproj" />
+
+	</ItemGroup>
 
 
 
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\1.Core\ApplicationService\LumaTemplate.Core.ApplicationService.csproj" />
-		<ProjectReference Include="..\..\2.Infra\Data\Sql.Commands\LumaTemplate.Infra.Data.Sql.Commands.csproj" />
-		<ProjectReference Include="..\..\2.Infra\Data\Sql.Queries\LumaTemplate.Infra.Data.Sql.Queries.csproj" />
+		<Using Include="Luma.Utilities.SoftwarePartDetector.Attributes" />
+		<Using Include="Luma.EndPoints.Web.Controllers" />
+		<Using Include="Asp.Versioning" />
+		<Using Include="Microsoft.AspNetCore.Mvc" />
+		<Using Include="Microsoft.AspNetCore.Authorization" />
 	</ItemGroup>
+
+
 
 </Project>
 
