@@ -23,11 +23,42 @@
             "replaces": "DbContextName",
             "FileRename": "DbContextName",
             "defaultValue": "DbContextName"
+        },
+        "httpPort": {
+            "type": "parameter",
+            "replaces": "5198",
+            "defaultValue": "5198",
+            "description": "HTTP port number"
+        },
+        "httpsPort": {
+            "type": "parameter",
+            "replaces": "7202",
+            "defaultValue": "7202",
+            "description": "HTTPS port number"
+        },
+        "launchBrowser": {
+            "type": "parameter",
+            "replaces": "LaunchBrowserValue",
+            "defaultValue": "false",
+            "description": "Whether to launch browser on startup"
+        },
+        "environment": {
+            "type": "parameter",
+            "replaces": "EnvironmentValue",
+            "defaultValue": "Development",
+            "description": "ASP.NET Core environment"
+        },
+        "httpProfileName": {
+            "type": "parameter",
+            "replaces": "HttpProfileName",
+            "defaultValue": "http",
+            "description": "Name for the HTTP launch profile"
+        },
+        "httpsProfileName": {
+            "type": "parameter",
+            "replaces": "HttpsProfileName",
+            "defaultValue": "https",
+            "description": "Name for the HTTPS launch profile"
         }
     }
 }
-
-
-
-
-
