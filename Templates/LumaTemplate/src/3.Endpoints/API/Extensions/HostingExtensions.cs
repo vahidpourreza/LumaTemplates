@@ -41,22 +41,6 @@ public static class HostingExtensions
 
 
 
-        #region Basic Authorization
-
-        // Add a default policy that requires a specific claim
-        //builder.Services.AddAuthorization(options =>
-        //{
-        //    // Default policy
-        //    options.DefaultPolicy = new AuthorizationPolicyBuilder()
-        //        .RequireAuthenticatedUser()
-        //        .RequireClaim("scope", "UserAccess")
-        //        .Build();
-
-        //});
-
-        #endregion
-
-
         #region ChangeData
 
         builder.Services.AddLumaChangeDatalogDalSql(c =>

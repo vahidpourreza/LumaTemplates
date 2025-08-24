@@ -6,18 +6,30 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
-
 	<ItemGroup>
 		<PackageReference Include="Luma.Core.ApplicationServices" Version="9.0.0" />
+		<PackageReference Include="Luma.Core.Domain" Version="9.0.0" />
+		<PackageReference Include="Luma.Core.RequestResponse" Version="9.0.0" />
+		<PackageReference Include="Luma.Utilities" Version="9.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\Contracts\LumaTemplate.Core.Contracts.csproj" />
+		<ProjectReference Include="..\DomainService\LumaTemplate.Core.DomainService.csproj" />
+		<ProjectReference Include="..\Domain\LumaTemplate.Core.Domain.csproj" />
+		<ProjectReference Include="..\RequestResponse\LumaTemplate.Core.RequestResponse.csproj" />
 	</ItemGroup>
 
+
+
 	<ItemGroup>
-	  <Folder Include="Users\Events\UserMobileNumberChanged\" />
+		<Using Include="Luma.Core.ApplicationServices.Commands" />
+		<Using Include="Luma.Core.ApplicationServices.Queries" />
+		<Using Include="Luma.Core.RequestResponse.Queries" />
+		<Using Include="Luma.Core.RequestResponse.Commands" />
+		<Using Include="Luma.Utilities" />
 	</ItemGroup>
+
 
 </Project>
 

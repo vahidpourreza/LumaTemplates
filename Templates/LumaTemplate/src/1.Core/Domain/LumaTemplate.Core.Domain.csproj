@@ -11,6 +11,7 @@
 	<ItemGroup>
 		<PackageReference Include="Luma.Core.Domain" Version="9.0.0" />
 		<PackageReference Include="Luma.Core.Domain.Toolkits" Version="9.0.0" />
+		<PackageReference Include="Luma.Utilities" Version="9.0.0" />
 	</ItemGroup>
 
 
@@ -21,4 +22,6 @@
 
 
 </Project>
+
+
 

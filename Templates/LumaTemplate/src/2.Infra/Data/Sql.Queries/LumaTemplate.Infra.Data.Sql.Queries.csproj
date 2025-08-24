@@ -18,6 +18,10 @@
 		<ProjectReference Include="..\..\..\1.Core\Contracts\LumaTemplate.Core.Contracts.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Entities\" />
+	</ItemGroup>
+
 </Project>
 
 

@@ -10,11 +10,20 @@
 	<ItemGroup>
 		<PackageReference Include="Luma.Extensions.Translations.Abstractions" Version="9.0.0" />
 		<PackageReference Include="Luma.Core.RequestResponse" Version="9.0.0" />
+		<PackageReference Include="Luma.Utilities" Version="9.0.0" />
 	</ItemGroup>
 
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Resources\LumaTemplate.Core.Resources.csproj" />
+	</ItemGroup>
+
+
+
+	<ItemGroup>
+		<Using Include="Luma.Core.RequestResponse.Commands" />
+		<Using Include="Luma.Core.RequestResponse.Endpoints" />
+		<Using Include="Luma.Core.RequestResponse.Queries" />
 	</ItemGroup>
 
 

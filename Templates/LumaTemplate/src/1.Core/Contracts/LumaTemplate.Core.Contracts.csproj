@@ -10,6 +10,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Luma.Core.Contracts" Version="9.0.0" />
+		<PackageReference Include="Luma.Utilities" Version="9.0.0" />
 	</ItemGroup>
 
 
@@ -18,6 +19,7 @@
 		<ProjectReference Include="..\Domain\LumaTemplate.Core.Domain.csproj" />
 		<ProjectReference Include="..\RequestResponse\LumaTemplate.Core.RequestResponse.csproj" />
 	</ItemGroup>
+
 
 </Project>
 
